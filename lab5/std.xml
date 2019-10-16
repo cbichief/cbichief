@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<students>
+<std no="1">
+	<sid>101</sid>
+	<snm>abc</snm>
+	<saddr>GNT</saddr>
+</std>
+<std no="2">
+	<sid>102</sid>
+	<snm>def</snm>
+	<saddr>ONG</saddr>
+</std>
+<std no="3">
+	<sid>102</sid>
+	<snm>def</snm>
+	<saddr>ONG</saddr>
+</std>
+</students>
+	

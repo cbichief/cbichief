@@ -1,0 +1,37 @@
+click on netbeanside6.5(desktop)->file->newproject->javaee(categories)->enterpriseapllication(projects)->next->
+project name:(lab6),project location[browse] user->c:users\register number->select use dedicated folder for using libraries->
+next->server:[glassfish v2]->select create ejb module->select web application module->finish
+
+
+see on left side->lab6_ejb(right click)->new->sessionbean->ejb name:[message]->package:[it]->select stateless->select remote->finish
+
+
+
+public class messageBean implements messageRemote
+{
+ right click->insert code->add business method->name:[sayhi] return type[String]->parameters[add]
+click on add button name[hi]->select remote->ok
+
+
+public String sayhi(String hi)
+{
+  "welcome to"+hi;
+}
+
+click on green button
+
+lab6_war(right click)->new->servlet->class name:[myservlet]->package[mypackage]->next->finish
+
+try
+{
+ right click->insert code->callEnterpriseBean->expand lab6_ejb->select messageBean->click on ok
+
+out.println("<h1>goodmorning"+messageBean.sayhi("rvrjc")+"</h1>");
+
+
+webpages(expand)->index.jsp(right click)->open->
+<body>
+<h1>Hello world!</h1>
+<a href="myservlet">clickhere</a>
+
+file->save all->click on build main project->click on run main project
